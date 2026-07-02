@@ -1,0 +1,14 @@
+# El Metate
+
+> El Metate — 5 locations. Menu and online ordering (pickup + delivery) per location.
+
+## Locations
+- [Dunlap](https://elmetatemexicanrestaurants.com/dunlap/): 16952 Rankin Ave Unit D, Dunlap, TN, 37327
+- [Hixson](https://elmetatemexicanrestaurants.com/hixson/): 5922 Hixson Pike, Hixson, TN, 37343
+- [Knoxville](https://elmetatemexicanrestaurants.com/knoxville/): 4221 Sam Walton Way, Knoxville, TN, 37938
+- [Signal Mountain](https://elmetatemexicanrestaurants.com/signal-mountain/): 1238 Taft Hwy, Signal Mountain, TN, 37377
+- [Soddy Daisy](https://elmetatemexicanrestaurants.com/soddy-daisy/): 9332 Dayton Pike #110, Soddy-Daisy, TN, 37379
+
+## Pages
+- [Menu](https://elmetatemexicanrestaurants.com/menu/)
+- [All Locations](https://elmetatemexicanrestaurants.com/locations/)

@@ -1,0 +1,19 @@
+{
+  "brand": "El Metate",
+  "domain": "elmetatemexicanrestaurants.com",
+  "locations": 5,
+  "pages": [
+    "/",
+    "/locations/",
+    "/menu/",
+    "/dunlap/",
+    "/dunlap/vip/",
+    "/hixson/",
+    "/hixson/vip/",
+    "/knoxville/",
+    "/knoxville/vip/",
+    "/signal-mountain/",
+    "/soddy-daisy/",
+    "/soddy-daisy/vip/"
+  ]
+}

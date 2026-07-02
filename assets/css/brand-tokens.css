@@ -1,0 +1,8 @@
+:root{
+  --primary:#1a3fa0;--primary-dark:#14317d;--secondary:#8b2500;--accent:#f5a623;
+  --on-primary:#ffffff;--on-secondary:#ffffff;--on-accent:#1a1a1a;--bg:#f5f0e8;--text:#2a2a2a;
+  --font-heading:'Roboto',system-ui,sans-serif;--font-body:'Montserrat',system-ui,sans-serif;--font-script:'Roboto',sans-serif;
+  --custom-dark-blue:var(--primary);--custom-blue:var(--secondary);--custom-yellow:var(--accent);
+  --base:#ffffff;--contrast:#000000;--radius-btn:10px;--nav-height:70px;
+}
+body{background:var(--bg)}

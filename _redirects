@@ -1,0 +1,11 @@
+# Old per-location subdomains -> consolidated location pages
+https://dunlap.elmetatemexicanrestaurants.com /dunlap/ 301
+https://dunlap.elmetatemexicanrestaurants.com/* /dunlap/ 301
+https://hixson.elmetatemexicanrestaurants.com /hixson/ 301
+https://hixson.elmetatemexicanrestaurants.com/* /hixson/ 301
+https://knoxville.elmetatemexicanrestaurants.com /knoxville/ 301
+https://knoxville.elmetatemexicanrestaurants.com/* /knoxville/ 301
+https://signal.elmetatemexicanrestaurants.com /signal-mountain/ 301
+https://signal.elmetatemexicanrestaurants.com/* /signal-mountain/ 301
+https://soddydaisy.elmetatemexicanrestaurants.com /soddy-daisy/ 301
+https://soddydaisy.elmetatemexicanrestaurants.com/* /soddy-daisy/ 301
