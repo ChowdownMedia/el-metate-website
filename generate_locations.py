@@ -7,6 +7,15 @@ import re, pathlib
 ROOT = pathlib.Path(__file__).parent
 MASTER = (ROOT / "dunlap" / "index.html").read_text()
 
+# Real per-location hours (Dunlap master = 10:30a-9p, Fri-Sat til 10p).
+# (today/Mon-Thu/Sun display, Fri-Sat display, JSON-LD mon-thu opens/closes, fri-sat opens/closes)
+HOURS = {
+ "hixson":          ("11:00 AM - 9:30 PM","11:00 AM - 10:00 PM","11:00","21:30","11:00","22:00"),
+ "knoxville":       ("11:00 AM - 10:00 PM","11:00 AM - 10:00 PM","11:00","22:00","11:00","22:00"),
+ "soddy-daisy":     ("11:00 AM - 9:30 PM","11:00 AM - 10:00 PM","11:00","21:30","11:00","22:00"),
+ "signal-mountain": ("11:00 AM - 9:30 PM","11:00 AM - 10:00 PM","11:00","21:30","11:00","22:00"),
+}
+
 def review_card(text, name, city):
     stamp = ('<span class="stamp" style="width:38px;height:38px;box-shadow:2px 2px 0 var(--ink)">'
              '<svg class="mk" viewBox="0 0 100 100" aria-hidden="true"><path fill-rule="evenodd" d="M14 36 a36 11 0 0 1 72 0 C86 62 71 77 50 77 C29 77 14 62 14 36 Z M26 34 a24 7 0 1 0 48 0 a24 7 0 1 0 -48 0 Z"/><path d="M28 74 l-6 17 l9 0 l4 -13 z"/><path d="M45 76 l0 16 l10 0 l0 -16 z"/><path d="M72 74 l6 17 l-9 0 l-4 -13 z"/></svg></span>')
@@ -106,6 +115,13 @@ for slug, d in LOCS.items():
     h = h.replace('"postalCode":"37327"', f'"postalCode":"{d["zip"]}"')
     h = h.replace("16952+Rankin+Ave+Unit+D+Dunlap+TN+37327",
                   (d["street"] + " " + city + " TN " + d["zip"]).replace(",", "").replace(" ", "+"))
+
+    # 5b) Real hours (swap Dunlap's into this location's)
+    td, fs, mo, mc, fo, fc = HOURS[slug]
+    h = h.replace("10:30 AM - 9:00 PM", td)     # hero TODAY + Mon-Thu row + Sunday row
+    h = h.replace("10:30 AM - 10:00 PM", fs)    # Friday + Saturday rows
+    h = h.replace('"opens":"10:30","closes":"21:00"', f'"opens":"{mo}","closes":"{mc}"')
+    h = h.replace('"opens":"10:30","closes":"22:00"', f'"opens":"{fo}","closes":"{fc}"')
 
     # 6) Paths + canonical/OG
     h = h.replace("/dunlap/", f"/{slug}/")
