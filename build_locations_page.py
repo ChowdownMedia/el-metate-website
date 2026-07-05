@@ -51,9 +51,13 @@ hero = ('<section class="section" style="padding-top:var(--sp-7);padding-bottom:
         '<h1 style="font-size:var(--fs-hero);margin:var(--sp-3) 0 var(--sp-4)">Find your <span style="color:var(--terra)">El Metate</span></h1>'
         '<p class="reveal" style="font-size:1.15rem;max-width:46ch;margin:0 auto;color:var(--ink-2)">Five neighborhood kitchens across Tennessee, one family recipe. Pick a location to order pickup, see hours, or join its VIP club.</p></div></section>')
 
-grid = ('<section class="section sec-blue-tint" id="locations"><div class="wrap"><div class="grid-loc">'
+# sr-only section heading keeps the ladder valid: h1 (hero) -> h2 -> h3 (cards)
+SR = 'style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:-1px;border:0"'
+grid = ('<section class="section sec-blue-tint" id="locations"><div class="wrap">'
+        f'<h2 {SR}>Our Locations</h2><div class="grid-loc">'
         + "\n".join(card(*l) for l in LOCS) + '</div></div></section>')
 
-out = head_header + "\n" + hero + "\n" + grid + "\n" + tail
+# <main> landmark wraps the page's primary content
+out = head_header + '\n<main>' + hero + "\n" + grid + "\n</main>\n" + tail
 (ROOT / "locations" / "index.html").write_text(out)
 print("locations/index.html:", len(out), "bytes")
