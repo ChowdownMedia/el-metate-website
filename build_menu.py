@@ -69,7 +69,7 @@ MENU_CSS = """
 .menu-item-desc{font-family:'Hanken Grotesk',system-ui,sans-serif;color:var(--ink-2);font-size:.92rem;line-height:1.5;margin-top:4px}
 .menu-item-photo{width:100%;height:210px;object-fit:cover;border-radius:12px;margin-top:12px;display:block;box-shadow:0 4px 14px rgba(43,27,16,.12)}
 .menu-panel.all-mode .menu-item-photo{display:none}
-.menu-allergen{max-width:820px;margin:48px auto 0;padding-top:22px;border-top:1px solid rgba(43,27,16,.10);font-size:.78rem;color:#9b8a72;font-style:italic;text-align:center;line-height:1.5;font-family:'Hanken Grotesk',system-ui,sans-serif}
+.menu-allergen{max-width:820px;margin:48px auto 0;padding-top:22px;border-top:1px solid rgba(43,27,16,.10);font-size:.78rem;color:var(--ink-2);font-style:italic;text-align:center;line-height:1.5;font-family:'Hanken Grotesk',system-ui,sans-serif}
 .menu-large .menu-rail-track{justify-content:flex-start;scrollbar-width:thin;padding-bottom:8px}
 .menu-large .menu-rail-track::-webkit-scrollbar{display:block;height:4px}
 .menu-large .menu-rail-track::-webkit-scrollbar-track{background:transparent}
