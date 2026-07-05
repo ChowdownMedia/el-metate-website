@@ -65,7 +65,7 @@ MENU_CSS = """
 .menu-item{break-inside:avoid;margin-bottom:16px;padding-bottom:14px;border-bottom:1px dashed rgba(43,27,16,.14)}
 .menu-item-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .menu-item-name{font-family:'Hanken Grotesk',system-ui,sans-serif;font-weight:700;color:var(--ink);font-size:1.05rem}
-.menu-item-price{font-family:'Baloo 2',sans-serif;color:var(--terra);white-space:nowrap;font-size:1rem}
+.menu-item-price{font-family:'Baloo 2',sans-serif;color:var(--terra-deep);white-space:nowrap;font-size:1rem}
 .menu-item-desc{font-family:'Hanken Grotesk',system-ui,sans-serif;color:var(--ink-2);font-size:.92rem;line-height:1.5;margin-top:4px}
 .menu-item-photo{width:100%;height:210px;object-fit:cover;border-radius:12px;margin-top:12px;display:block;box-shadow:0 4px 14px rgba(43,27,16,.12)}
 .menu-panel.all-mode .menu-item-photo{display:none}
