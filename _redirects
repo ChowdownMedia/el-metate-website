@@ -1,11 +1,18 @@
-# Old per-location subdomains -> consolidated location pages
-https://dunlap.elmetatemexicanrestaurants.com /dunlap/ 301
-https://dunlap.elmetatemexicanrestaurants.com/* /dunlap/ 301
-https://hixson.elmetatemexicanrestaurants.com /hixson/ 301
-https://hixson.elmetatemexicanrestaurants.com/* /hixson/ 301
-https://knoxville.elmetatemexicanrestaurants.com /knoxville/ 301
-https://knoxville.elmetatemexicanrestaurants.com/* /knoxville/ 301
-https://signal.elmetatemexicanrestaurants.com /signal-mountain/ 301
-https://signal.elmetatemexicanrestaurants.com/* /signal-mountain/ 301
-https://soddydaisy.elmetatemexicanrestaurants.com /soddy-daisy/ 301
-https://soddydaisy.elmetatemexicanrestaurants.com/* /soddy-daisy/ 301
+# Old per-location subdomains -> consolidated www location pages.
+# NOTE: these only fire when the subdomain is CF-served (CNAME -> el-metate.pages.dev).
+# GoDaddy 301-forward subdomains bypass CF and drop deep paths (e.g. /join-now 404s).
+
+# /join-now (VIP enroll URL used by the loyalty scanner apps) -> per-location VIP page.
+# MUST precede the catch-all below (first match wins).
+https://dunlap.elmetatemexicanrestaurants.com/join-now https://www.elmetatemexicanrestaurants.com/dunlap/vip/ 301
+https://hixson.elmetatemexicanrestaurants.com/join-now https://www.elmetatemexicanrestaurants.com/hixson/vip/ 301
+https://knoxville.elmetatemexicanrestaurants.com/join-now https://www.elmetatemexicanrestaurants.com/knoxville/vip/ 301
+https://signal.elmetatemexicanrestaurants.com/join-now https://www.elmetatemexicanrestaurants.com/signal-mountain/vip/ 301
+https://soddydaisy.elmetatemexicanrestaurants.com/join-now https://www.elmetatemexicanrestaurants.com/soddy-daisy/vip/ 301
+
+# Everything else on each old subdomain -> its consolidated www location page.
+https://dunlap.elmetatemexicanrestaurants.com/* https://www.elmetatemexicanrestaurants.com/dunlap/ 301
+https://hixson.elmetatemexicanrestaurants.com/* https://www.elmetatemexicanrestaurants.com/hixson/ 301
+https://knoxville.elmetatemexicanrestaurants.com/* https://www.elmetatemexicanrestaurants.com/knoxville/ 301
+https://signal.elmetatemexicanrestaurants.com/* https://www.elmetatemexicanrestaurants.com/signal-mountain/ 301
+https://soddydaisy.elmetatemexicanrestaurants.com/* https://www.elmetatemexicanrestaurants.com/soddy-daisy/ 301
